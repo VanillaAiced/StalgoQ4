@@ -8,6 +8,8 @@ import Homescreen from "./screens/Homescreen";
 import ProductScreen from "./screens/ProductScreen";
 import ProjectCreateScreen from "./screens/ProjectCreateScreen";
 import TaskCreateScreen from "./screens/TaskCreateScreen";
+import UserListScreen from "./screens/UserListScreen";
+import UserCreateScreen from "./screens/UserCreateScreen";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
               path="/project/:id/task/create"
               element={<TaskCreateScreen />}
             />
+            <Route path="/users" element={<UserListScreen />} />
+            <Route path="/users/create" element={<UserCreateScreen />} />
           </Routes>
         </Container>
       </main>
