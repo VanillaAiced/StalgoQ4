@@ -9,9 +9,9 @@ import { Container, Row, Col } from "react-bootstrap";
 function Header() {
   return (
     <header>
-      <Navbar expand="lg" bg="primary" variant="dark" collapseOnSelect>
+      <Navbar expand="lg" bg="dark" variant="dark" collapseOnSelect>
         <Container fluid>
-          <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+          <Navbar.Brand href="#">Dashboard</Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -21,7 +21,7 @@ function Header() {
             >
               <Nav.Link href="#action1">Home</Nav.Link>
               <Nav.Link href="#action2">Link</Nav.Link>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
+              <NavDropdown title="More" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action4">
                   Another action
