@@ -1,10 +1,17 @@
 import React, { useState } from "react";
-import { Table } from "react-bootstrap";
+import { Table, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import products from "../products";
 
 function Homescreen() {
   const [expanded, setExpanded] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const filteredProjects = products.filter(
+    (p) =>
+      p.project_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      p.project_description.toLowerCase().includes(searchTerm.toLowerCase()),
+  );
 
   return (
     <>
@@ -14,6 +21,14 @@ function Homescreen() {
           New Project
         </Link>
       </div>
+
+      <Form.Control
+        type="text"
+        placeholder="Search projects..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="mb-3"
+      />
 
       <Table hover responsive>
         <thead>
@@ -26,7 +41,7 @@ function Homescreen() {
           </tr>
         </thead>
         <tbody>
-          {products.map((p) => (
+          {filteredProjects.map((p) => (
             <React.Fragment key={p._id}>
               <tr
                 onClick={() => setExpanded(expanded === p._id ? null : p._id)}
@@ -85,6 +100,12 @@ function Homescreen() {
           ))}
         </tbody>
       </Table>
+
+      {filteredProjects.length === 0 && (
+        <div className="text-center py-4 text-muted">
+          {searchTerm ? "No projects found" : "No projects yet"}
+        </div>
+      )}
     </>
   );
 }
