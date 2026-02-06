@@ -1,72 +1,82 @@
-# Getting Started with Create React App
+# Frontend Template
 
-**After cloning the project, run `npm install` to install the dependencies.**
+A simple starter template for building websites. No complicated setup required - just follow the steps below and you'll be up and running in minutes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Before You Start
 
-## Available Scripts
+You'll need to install Node.js on your computer first. Think of Node.js as the engine that powers this project.
 
-In the project directory, you can run:
+### Installing Node.js
 
-### `npm start`
+1. Go to [nodejs.org](https://nodejs.org/)
+2. Download the LTS version (the one that says "Recommended for most users")
+3. Run the installer and follow the steps
+4. To check if it installed correctly, open your terminal/command prompt and type:
+   ```bash
+   node --version
+   ```
+   You should see a version number like `v20.x.x`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting This Project Running
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Once Node.js is installed, here's what to do:
 
-### `npm test`
+### Step 1: Install Project Dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Open your terminal in this project folder and run:
 
-### `npm run build`
+```bash
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This downloads all the tools and libraries the project needs. It might take a minute or two.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Step 2: Start the Development Server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Run this command:
 
-### `npm run eject`
+```bash
+npm run dev
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The terminal will show you a local address (usually `http://localhost:5173`). Open that in your web browser and you'll see your site!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Any changes you make to the code will automatically show up in the browser - no need to refresh.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Step 3 (Optional): Building for Production
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+When you're ready to put your site online, run:
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This creates an optimized version of your site in a `dist` folder. You can upload that folder to any web hosting service.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## What's in This Template?
 
-### Code Splitting
+```
+├── src/
+│   ├── main.js       # Your JavaScript code goes here
+│   └── style.css     # Your styles go here
+├── public/           # Put images and other files here
+├── index.html        # The main HTML file
+└── package.json      # Lists all the project dependencies
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Troubleshooting
 
-### Analyzing the Bundle Size
+**"npm is not recognized" error**: Node.js isn't installed correctly. Try reinstalling it.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Port already in use**: Another program is using port 5173. Close other development servers or restart your computer.
 
-### Making a Progressive Web App
+**Changes not showing up**: Make sure the dev server is running (`npm run dev`). Check the terminal for errors.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Need Help?
 
-### Advanced Configuration
+- [Vite Documentation](https://vitejs.dev/) - Learn about the build tool
+- [MDN Web Docs](https://developer.mozilla.org/) - Learn HTML, CSS, and JavaScript
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT
